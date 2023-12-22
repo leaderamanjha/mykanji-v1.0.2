@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'controller/sign_up_one_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mykanji/core/app_export.dart';
@@ -77,7 +79,7 @@ class SignUpOneScreen extends GetWidget<SignUpOneController> {
       SizedBox(height: 6.v),
       CustomTextFormField(
           controller: controller.nameController,
-          hintText: "lbl_siddartha".tr,
+          hintText: "Enter Your Name",
           prefix: Container(
               margin: EdgeInsets.fromLTRB(14.h, 10.v, 8.h, 10.v),
               child: CustomImageView(
@@ -97,7 +99,7 @@ class SignUpOneScreen extends GetWidget<SignUpOneController> {
       SizedBox(height: 5.v),
       CustomTextFormField(
           controller: controller.emailController,
-          hintText: "lbl_91_98945_65589".tr,
+          hintText: "Enter Your Mobile Number",
           prefix: Container(
               margin: EdgeInsets.fromLTRB(14.h, 10.v, 8.h, 10.v),
               child: CustomImageView(
@@ -117,7 +119,7 @@ class SignUpOneScreen extends GetWidget<SignUpOneController> {
       SizedBox(height: 6.v),
       CustomTextFormField(
           controller: controller.passwordController,
-          hintText: "lbl_opksdgb245w".tr,
+          hintText: "Enter Secured Password ",
           prefix: Container(
               margin: EdgeInsets.fromLTRB(14.h, 10.v, 8.h, 10.v),
               child: CustomImageView(
@@ -139,7 +141,7 @@ class SignUpOneScreen extends GetWidget<SignUpOneController> {
   Widget _buildConfirmpassword() {
     return Obx(() => CustomTextFormField(
         controller: controller.confirmpasswordController,
-        hintText: "lbl_opksdgb245w".tr,
+        hintText: "Confirm Your Secured Password",
         textInputAction: TextInputAction.done,
         textInputType: TextInputType.visiblePassword,
         prefix: Container(
@@ -161,12 +163,6 @@ class SignUpOneScreen extends GetWidget<SignUpOneController> {
                     height: 16.adaptSize,
                     width: 16.adaptSize))),
         suffixConstraints: BoxConstraints(maxHeight: 41.v),
-        validator: (value) {
-          if (value == null || (!isValidPassword(value, isRequired: true))) {
-            return "err_msg_please_enter_valid_password".tr;
-          }
-          return null;
-        },
         obscureText: controller.isShowPassword.value));
   }
 

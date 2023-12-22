@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'controller/logintwo_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mykanji/core/app_export.dart';
@@ -89,7 +91,7 @@ class LogintwoScreen extends GetWidget<LogintwoController> {
   Widget _buildEmailInput() {
     return CustomTextFormField(
         controller: controller.emailInputController,
-        hintText: "msg_siddarthaj23_gmail_com".tr,
+        hintText: "Enter Your Number or Email".tr,
         textInputType: TextInputType.emailAddress,
         prefix: Container(
             margin: EdgeInsets.fromLTRB(14.h, 10.v, 8.h, 10.v),
@@ -98,12 +100,6 @@ class LogintwoScreen extends GetWidget<LogintwoController> {
                 height: 20.adaptSize,
                 width: 20.adaptSize)),
         prefixConstraints: BoxConstraints(maxHeight: 41.v),
-        validator: (value) {
-          if (value == null || (!isValidEmail(value, isRequired: true))) {
-            return "err_msg_please_enter_valid_email".tr;
-          }
-          return null;
-        },
         contentPadding: EdgeInsets.only(top: 10.v, right: 30.h, bottom: 10.v));
   }
 
@@ -123,7 +119,7 @@ class LogintwoScreen extends GetWidget<LogintwoController> {
       SizedBox(height: 6.v),
       Obx(() => CustomTextFormField(
           controller: controller.passwordController,
-          hintText: "lbl_opksdgb245w".tr,
+          hintText: "Enter Password",
           textInputAction: TextInputAction.done,
           textInputType: TextInputType.visiblePassword,
           prefix: Container(
@@ -145,12 +141,6 @@ class LogintwoScreen extends GetWidget<LogintwoController> {
                       height: 16.adaptSize,
                       width: 16.adaptSize))),
           suffixConstraints: BoxConstraints(maxHeight: 41.v),
-          validator: (value) {
-            if (value == null || (!isValidPassword(value, isRequired: true))) {
-              return "err_msg_please_enter_valid_password".tr;
-            }
-            return null;
-          },
           obscureText: controller.isShowPassword.value))
     ]);
   }
