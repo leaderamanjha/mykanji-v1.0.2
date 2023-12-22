@@ -1,5 +1,5 @@
-import 'pexelsphotoby_item_model.dart';
 import '../../../core/app_export.dart';
+import 'pexelsphotoby_item_model.dart';
 import 'productlisting_item_model.dart';
 
 /// This class defines the variables used in the [home_screen],

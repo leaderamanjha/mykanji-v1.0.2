@@ -1,4 +1,5 @@
-import '../../../core/app_export.dart';
+import 'package:mykanji/core/app_export.dart';
+
 import 'stackedcard_item_model.dart';
 
 /// This class defines the variables used in the [list_product_screen],
